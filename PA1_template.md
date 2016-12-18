@@ -27,7 +27,7 @@ a day.
     colnames(histdata)[2] <- "steps"
     hist(histdata$steps, breaks = 20, main = "Steps Per Day", xlab = "Steps", col = "green")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-2-1.png)
+![](Figure/unnamed-chunk-3-1.png)
 
 The mean and median number of steps taken in a day is:
 
@@ -49,7 +49,7 @@ each 5 minute interval throughout the day:
     colnames(timedata)[2] <- "steps"
     plot(timedata, type="l", main = "Steps Taken Throughout Day", ylab = "Steps")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-4-1.png)
+![](Figure/unnamed-chunk-5-1.png)
 
 The 5 minute interval with the highest average of steps taken throughout
 the day (and the mean number of steps in that interval) is:
@@ -87,7 +87,7 @@ as previous histogram, but with missing values imputed):
     colnames(histdata2)[2] <- "steps"
     hist(histdata2$steps, breaks = 20, main = "Steps Per Day", xlab = "Steps", col = "green")
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](Figure/unnamed-chunk-10-1.png)
 
 And the mean and median of the step count per day (using the dataset
 with imputed data) are:
@@ -118,4 +118,4 @@ separate panels.
     plot <- ggplot(data=timedata2, aes(x=interval, y=steps, group=daytype, color=daytype)) 
     plot + geom_line() + facet_grid(daytype~.)
 
-![](PA1_template_files/figure-markdown_strict/unnamed-chunk-12-1.png)
+![](Figure/unnamed-chunk-13-1.png)
